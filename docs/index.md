@@ -11,17 +11,14 @@ hero:
 
   actions:
     - theme: brand
-      text: 原创设定与世界观
-      link: https://oc.miaowcham.top/
-    - theme: alt
       text: 个人项目
       link: /Project
-    - theme: alt
+    - theme: brand
       text: 个人文档
       link: /docs
     - theme: alt
-      text: Github
-      link: https://github.com/MiaowCham
+      text: 主站
+      link: https://miaowcham.top/
 
 features:
   - icon: 🎮

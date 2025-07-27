@@ -13,8 +13,7 @@ export default defineConfig({
     logo: '/pictures/logo.png',
     // 顶部导航栏
     nav: [
-      { text: '首页', link: '/' },
-      { text:'原创设定集', link:'https://oc.miaowcham.top/'},
+      { text: '返回主站', link: 'https://miaowcham.top/' },
       { text: '个人文档', link: '/docs/' },
       { text: '个人项目', link: '/Project' },
     ],

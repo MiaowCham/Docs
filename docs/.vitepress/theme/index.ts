@@ -30,6 +30,24 @@ export default {
     
     // 禁用右键菜单和快捷键，并显示提示
     if (typeof window !== 'undefined') {
+            // 监听主题变化，在切换时关闭提示弹窗
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            // 主题切换时立即关闭所有提示弹窗
+            const existingNotifications = document.querySelectorAll('.protection-notification')
+            existingNotifications.forEach(notification => {
+              notification.remove()
+            })
+          }
+        })
+      })
+      
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class']
+      })
+      
       // 创建提示元素
        const createToast = (message: string) => {
          // 移除旧的提示弹窗
@@ -38,24 +56,37 @@ export default {
            notification.remove()
          })
 
+         // 检测当前主题模式
+         const isDarkMode = document.documentElement.classList.contains('dark')
+         
          const toast = document.createElement('div')
          toast.className = 'protection-notification'
          toast.textContent = message
+    
+         // 根据主题模式设置样式
+         const backgroundStyle = isDarkMode 
+           ? 'background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2);'
+           : 'background: rgba(0, 0, 0, 0.09); border: 1px solid rgba(0, 0, 0, 0.1);'
+         
+         const textColor = isDarkMode ? 'white' : 'black'
+         const textShadow = isDarkMode 
+           ? '0 1px 2px rgba(0, 0, 0, 0.3)'
+           : '0 1px 2px rgba(255, 255, 255, 0.1)'
+         
          toast.style.cssText = `
            position: fixed;
            top: 30px;
            left: 50%;
            transform: translateX(-50%);
-           background: rgba(255, 255, 255, 0.15);
-           backdrop-filter: blur(20px);
-           -webkit-backdrop-filter: blur(20px);
-           border: 1px solid rgba(255, 255, 255, 0.2);
-           color: white;
+           ${backgroundStyle}
+           backdrop-filter: blur(10px);
+           -webkit-backdrop-filter: blur(10px);
+           color: ${textColor};
            padding: 6px 12px 6px 35px;
            border-radius: 50px;
            font-size: 14px;
            font-weight: 500;
-           text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+           text-shadow: ${textShadow};
            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
            z-index: 10000;
            animation: fadeInOut 3s ease-in-out;
@@ -68,9 +99,9 @@ export default {
            line-height: 1;
          `
         
-        // 添加警告图标
+        // 添加警告图标，根据主题选择图标
         const icon = document.createElement('img')
-        icon.src = '/pictures/warn.png'
+        icon.src = isDarkMode ? '/pictures/warn.png' : '/pictures/warn_dark.png'
         icon.style.cssText = `
           position: absolute;
           left: 12px;

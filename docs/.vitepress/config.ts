@@ -104,7 +104,7 @@ export default defineConfig({
 
     // 顶部图标链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/MiaowCham/MiaowCham' },
+      { icon: 'github', link: 'https://github.com/MiaowCham/docs' },
       { icon: 'qq', link: 'https://qm.qq.com/q/qjU8Nm72fe', ariaLabel: 'QQ' },
       { icon: 'bilibili', link: 'https://space.bilibili.com/485769432', ariaLabel: '哔哩哔哩' }
     ],
@@ -130,7 +130,7 @@ export default defineConfig({
       }
     },
     editLink: {
-      pattern: 'https://github.com/MiaowCham/miaowcham/edit/main/docs/:path',
+      pattern: 'https://github.com/MiaowCham/docs/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页面'
     },
     docFooter: {

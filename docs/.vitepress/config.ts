@@ -106,7 +106,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/MiaowCham/docs' },
       { icon: 'qq', link: 'https://qm.qq.com/q/qjU8Nm72fe', ariaLabel: 'QQ' },
-      { icon: 'bilibili', link: 'https://space.bilibili.com/485769432', ariaLabel: '哔哩哔哩' }
+      { icon: 'bilibili', link: 'https://space.bilibili.com/485769432', ariaLabel: '哔哩哔哩' },
+      { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2em" viewBox="0 0 640 512"><rect width="640" height="512" fill="none"/><path fill="currentColor" d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96M512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64"/></svg>' }, link: 'https://afdian.com/a/MiaowCham' , ariaLabel: '爱发电'}
     ],
 
     search: {

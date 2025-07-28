@@ -35,7 +35,7 @@ features:
     details: 一言(Hitokoto)命令行工具，支持在线API和本地语句包，让终端也能充满诗意
 ---
 
-## README.md
+## [README.md](https://github.com/MiaowCham/MiaowCham/blob/main/README.md)
 
 ### Hi there 👋 I'm 喵锵 (MiaowCham)
 
@@ -53,8 +53,8 @@ However, in the latter half of the year, I'll be heading to Qingdao, Shandong, C
 - 📺 I might post some videos on [Bilibili](https://space.bilibili.com/485769432).
 
 ## 📫 How to reach me:
-- 📧 Email: mcyyds1234@outlook.com
-- 📧 QQMail: QQ@miaowcham.top
+- 📧 Email: <a href="mailto:mcyyds1234@outlook.com" target="_blank">mcyyds1234@outlook.com</a>
+- 📧 QQMail: <a href="mailto:qq@miaowcham.top" target="_blank">qq@miaowcham.top</a>
 - 🐧 QQ: [2049669820](https://qm.qq.com/q/qjU8Nm72fe)
 - ✈️ Telegram: [@MiaowCham](https://t.me/miaowcham)
 

@@ -158,7 +158,7 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
     skipToContentLabel: '跳转到内容',
     footer: {
-      message: '除非另有说明，本站内容依据 <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> 许可证进行授权，图片资源除外',
+      message: '除非另有说明，本站内容依据 <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> 许可证进行授权，图片资源除外<br>主页大图作者为米画师@和了个肆，网站Logo原作者为米画师@无序-猫尊，详见<a href="https://oc.miaowcham.com/pictures/character#喵锵-设定图">设定站说明</a>',
       copyright: '网站使用强大的 VitePress 驱动'
     }
   },

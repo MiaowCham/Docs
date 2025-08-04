@@ -8,7 +8,8 @@
 </div>  
 
 >[!note]
->本项目的重构正式版本由 @MiaowCham 设计，使用 [Trae IDE](https://www.trae.ai/) 的 [Solo 模式](https://www.trae.ai/solo) 完成代码的实现
+>本项目的重构正式版本由 @MiaowCham 设计，使用 [Trae IDE](https://www.trae.ai/) 的 [Solo 模式](https://www.trae.ai/solo) 完成代码的实现  
+>AI太好用了你们知道吗
 
 一个功能丰富的命令行 OpenAI 聊天工具，支持多种模型、多语言界面和智能功能  
 你可以直接克隆仓库并运行 `main.py` 来使用  

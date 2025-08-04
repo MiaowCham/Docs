@@ -36,8 +36,13 @@ export default defineConfig({
             { text: '项目简介', link: '/Project/Vibrant-Visuals-Optimization-Docs/' },
             { text: '资源包总览', link: '/Project/Vibrant-Visuals-Optimization-Docs/resource'},
             { text: '如何使用', link: '/Project/Vibrant-Visuals-Optimization-Docs/howtouse'},
-            { text: '发行版下载', link: 'https://github.com/MiaowCham/Vibrant-Visuals-Optimization/releases/latest' },
-            { text: '构建板下载', link: 'https://github.com/MiaowCham/Vibrant-Visuals-Optimization/actions/workflows/compress-folders.yml' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '发行版下载', link: 'https://github.com/MiaowCham/Vibrant-Visuals-Optimization/releases/latest' },
+                { text: '构建板下载', link: 'https://github.com/MiaowCham/Vibrant-Visuals-Optimization/actions/workflows/compress-folders.yml' },
+              ],
+            },
           ],
         },
         {
@@ -45,9 +50,14 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '项目说明文档', link: '/Project/hitokoto-cli' },
-            { text: '项目地址', link: 'https://github.com/MiaowCham/Hitokoto-CLI' },
-            { text: '发行版下载', link: 'https://github.com/MiaowCham/Hitokoto-CLI/releases/latest' },
-            { text: '构建板下载', link: 'https://github.com/MiaowCham/hitokoto-cli/actions/workflows/build.yml' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/Hitokoto-CLI' },
+                { text: '发行版下载', link: 'https://github.com/MiaowCham/Hitokoto-CLI/releases/latest' },
+                { text: '构建板下载', link: 'https://github.com/MiaowCham/hitokoto-cli/actions/workflows/build.yml' },
+              ],
+            },
           ],
         },
         {
@@ -55,9 +65,14 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '项目说明文档', link: '/Project/TTML_to_Lyricify_Syllable_Tool' },
-            { text: '项目地址', link: 'https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool' },
-            { text: '发行版下载', link: 'https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool/releases/latest' },
-            { text: '构建板下载', link: 'https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool/actions/workflows/build.yml' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool' },
+                { text: '发行版下载', link: 'https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool/releases/latest' },
+                { text: '构建板下载', link: 'https://github.com/MiaowCham/TTML_to_Lyricify_Syllable_Tool/actions/workflows/build.yml' },
+              ],
+            },
           ],
         },
         {
@@ -65,10 +80,30 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '项目说明文档', link: '/Project/macOS_Tahoe_Themes_for_MDF' },
-            { text: '项目地址', link: 'https://github.com/MiaowCham/macOS_Tahoe_Themes_for_MDF' },
-            { text: 'Steam创意工坊', link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3500821680' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/macOS_Tahoe_Themes_for_MDF' },
+                { text: 'Steam创意工坊', link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3500821680' },
+              ],
+            },
           ],
         },
+        {
+          text: 'OpenAI Chat Tool CLI',
+          collapsed: true,
+          items: [
+            { text: '项目说明文档', link: '/Project/OpenAI-Chat-Tool_CLI' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/OpenAI-Chat-Tool_CLI' },
+                { text: '发行版下载', link: 'https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/releases/latest' },
+                { text: '构建板下载', link: 'https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/actions/workflows/build.yml' },
+              ],
+            },
+          ],
+        }
       ],
 
       // 个人文档

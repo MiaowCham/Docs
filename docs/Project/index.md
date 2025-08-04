@@ -41,3 +41,13 @@
 - [项目地址](https://github.com/MiaowCham/macOS_Tahoe_Themes_for_MDF)
 - [Steam创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3500821680)
 - 项目许可证: [CC0-1.0](https://github.com/MiaowCham/macOS_Tahoe_Themes_for_MDF/blob/main/LICENSE)
+
+## OpenAI Chat Tool CLI
+
+一个功能丰富的命令行 OpenAI 聊天工具，支持多种模型、多语言界面和智能功能  
+
+- [项目说明文档](/Project/OpenAI-Chat-Tool_CLI)
+- [项目地址](https://github.com/MiaowCham/OpenAI-Chat-Tool_CLI)
+- [构建板下载](https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/actions/workflows/build.yml)
+- [发行版下载](https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/releases/latest)
+- 项目许可证: [MIT](https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/blob/main/LICENSE)

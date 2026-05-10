@@ -10,6 +10,14 @@
 - [发行版下载](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/releases/latest)
 - 项目许可证: [CC0-1.0](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/blob/main/LICENSE)
 
+## GenshinCraft 整合材质
+
+一包通吃，无需加载过多材质包即可进行游玩。  
+无论你是生存玩家、PVP 玩家、红石玩家，还是刚入门的新手，都可以使用这个材质包。
+
+- [项目介绍文档](/Project/GenshinCraft_Texturepack)
+- [下载地址 (提取码: 9FZm)](https://1815255458.share.123pan.cn/123pan/tiDtVv-qkXnh?pwd=9FZm)
+
 ## 一言(Hitokoto)命令行工具
 
 > [!note]
@@ -51,3 +59,31 @@
 - [构建板下载](https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/actions/workflows/build.yml)
 - [发行版下载](https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/releases/latest)
 - 项目许可证: [MIT](https://github.com/MiaowCham/CMD_Open-AI_Chat_Tool/blob/main/LICENSE)
+
+## OptiMemory
+
+轻量级 Windows 内存优化工具，提供图形界面与命令行两种使用方式。
+
+- [项目说明文档](/Project/OptiMemory)
+- [项目地址](https://github.com/MiaowCham/OptiMemory)
+- [构建板下载](https://github.com/MiaowCham/OptiMemory/actions/workflows/build.yml)
+- [发行版下载](https://github.com/MiaowCham/OptiMemory/releases/latest)
+- 项目许可证: [Apache 2.0](https://github.com/MiaowCham/OptiMemory/blob/main/LICENSE)
+
+## 测测你是不是猪🐷
+
+趣味小测试🥳测测你是不是猪🐷
+
+- [项目说明文档](/Project/am-i-a-pig)
+- [项目地址](https://github.com/MiaowCham/am-i-a-pig)
+- [网站地址](http://piggytest.miaowcham.com/)
+- 项目许可证: [MIT](https://github.com/MiaowCham/am-i-a-pig/blob/main/LICENSE)
+
+## ⏱ 生命时钟
+
+一个网页小项目。计算你的年龄，精确到秒。猜你想找的 App：「生辰」
+
+- [项目说明文档](/Project/Life_Clock)
+- [项目地址](https://github.com/MiaowCham/Life_Clock)
+- [网站地址](https://lifeclock.miaowcham.com)
+- 项目许可证: [MIT](https://github.com/MiaowCham/Life_Clock/blob/main/LICENSE)

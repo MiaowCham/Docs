@@ -11,50 +11,36 @@ hero:
 
   actions:
     - theme: brand
-      text: 个人项目
+      text: 项目
       link: /Project
     - theme: brand
-      text: 个人文档
+      text: 文档  
       link: /docs
     - theme: alt
       text: 主站
-      link: https://miaowcham.top/
+      link: https://miaowcham.com/
+    - theme: alt
+      text: 爱发电
+      link: https://afdian.com/a/MiaowCham
 
-features:
-  - icon: 🎮
-    title: 灵动视效优化包
-    details: 为《我的世界》基岩版灵动视效制作的优化资源包系列
-  - icon: 🎵
-    title: TTML 转 Lyricify Syllable 工具
-    details: 一个适用于 TTML (AMLL标准) 文件转 Lyricify Syllable 的小工具
-  - icon: 🎨
-    title: macOS Tahoe Themes
-    details: 基于 macOS Tahoe 26，为 MyDockFinder 制作的 Liquid Glass 风格图标和主题  
-  - icon: 💻
-    title: 一言(Hitokoto)命令行工具
-    details: 一言(Hitokoto)命令行工具，支持在线API和本地语句包，让终端也能充满诗意
 ---
 
-## [README.md](https://github.com/MiaowCham/MiaowCham/blob/main/README.md)
+## 你好 👋 我是喵锵 (MiaowCham)
 
-### Hi there 👋 I'm 喵锵 (MiaowCham)
+我的名字是喵锵（MiaowCham），其实这个名字是我查字典时偶然得到的 💦  
+我是一名来自中国浙江的开源爱好者。作为一名业余开发者，我希望我的项目能帮助到一些人。🙏  
+不过，我可能不会像以前那样活跃于社区🥲因为我需要进修学业，以便更好的进行开发
 
-> [!note]
-> My English isn’t perfect—I use translation tools sometimes, But I will work hard to learn it.😄
+### 🥰 我的兴趣
+- 🔭 目前正在做一些 AI 相关的项目。
+- ⬇️ 喜欢用 Markdown 写文档。
+- 🐍 正在通过 AI 自学 Python 并尝试完成一些项目。
+- 📺 可能会在 [Bilibili](https://space.bilibili.com/485769432) 上传一些视频。
 
-My name is 喵锵 (MiaowCham). In fact, I got this name from looking it up in the dictionary 💦  
-I'm a passionate open-source enthusiast from Zhejiang, China. As a hobbyist developer, I hope my project can help some people.🙏  
-However, in the latter half of the year, I'll be heading to Qingdao, Shandong, China to continue my education, so I may not be as active in the community as before 🥲 But don't worry—I'm sure I'll be back soon!
-
-## 🥰 What I'm Into
-- 🔭 I’m currently working on AI projects.
-- ⬇️ I like to use Markdown to create documents.
-- 🐍 I am trying to self-learn Python through AI and complete some projects.
-- 📺 I might post some videos on [Bilibili](https://space.bilibili.com/485769432).
-
-## 📫 How to reach me:
-- 📧 Email: <a href="mailto:mcyyds1234@outlook.com" target="_blank">mcyyds1234@outlook.com</a>
-- 📧 QQMail: <a href="mailto:qq@miaowcham.top" target="_blank">qq@miaowcham.top</a>
+### 📫 联系方式：
+- 💗 爱发电：<a href="https://afdian.com/a/MiaowCham" target="_blank">https://afdian.com/a/MiaowCham</a>
+- 📧 邮箱: <a href="mailto:mcyyds1234@outlook.com" target="_blank">mcyyds1234@outlook.com</a>
+- 📧 QQ邮箱: <a href="mailto:qq@miaowcham.com" target="_blank">qq@miaowcham.com</a>
 - 🐧 QQ: [2049669820](https://qm.qq.com/q/qjU8Nm72fe)
 - ✈️ Telegram: [@MiaowCham](https://t.me/miaowcham)
 

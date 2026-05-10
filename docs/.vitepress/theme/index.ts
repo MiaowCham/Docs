@@ -144,6 +144,7 @@ export default {
       })
       
       // 禁用F12、Ctrl+Shift+I等开发者工具快捷键
+      /*
       document.addEventListener('keydown', (e) => {
         if (e.key === 'F12' || 
             (e.ctrlKey && e.shiftKey && e.key === 'I') ||
@@ -153,7 +154,7 @@ export default {
           createToast('为了浏览体验，本站禁用开发者工具')
           return false
         }
-      })
+      })*/
     }
   }
 } satisfies Theme

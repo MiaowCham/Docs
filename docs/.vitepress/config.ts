@@ -13,7 +13,7 @@ export default defineConfig({
     logo: '/pictures/logo.png',
     // 顶部导航栏
     nav: [
-      { text: '返回主站', link: 'https://miaowcham.top/' },
+      { text: '返回主站', link: 'https://miaowcham.com/' },
       { text: '个人文档', link: '/docs/' },
       { text: '个人项目', link: '/Project' },
     ],
@@ -41,6 +41,19 @@ export default defineConfig({
               items: [
                 { text: '发行版下载', link: 'https://github.com/MiaowCham/Vibrant-Visuals-Optimization/releases/latest' },
                 { text: '构建板下载', link: 'https://github.com/MiaowCham/Vibrant-Visuals-Optimization/actions/workflows/compress-folders.yml' },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'GenshinCraft 整合材质',
+          collapsed: true,
+          items: [
+            { text: '项目介绍文档', link: '/Project/GenshinCraft_Texturepack' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '下载地址 (提取码: 9FZm)', link: 'https://1815255458.share.123pan.cn/123pan/tiDtVv-qkXnh?pwd=9FZm' },
               ],
             },
           ],
@@ -103,7 +116,50 @@ export default defineConfig({
               ],
             },
           ],
-        }
+        },
+        {
+          text: 'OptiMemory',
+          collapsed: true,
+          items: [
+            { text: '项目说明文档', link: '/Project/OptiMemory' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/OptiMemory' },
+                { text: '发行版下载', link: 'https://github.com/MiaowCham/OptiMemory/releases/latest' },
+                { text: '构建板下载', link: 'https://github.com/MiaowCham/OptiMemory/actions/workflows/build.yml' },
+              ],
+            },
+          ],
+        },
+        {
+          text: '测测你是不是猪',
+          collapsed: true,
+          items: [
+            { text: '项目说明文档', link: '/Project/am-i-a-pig' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/am-i-a-pig' },
+                { text: '网站地址', link: 'http://piggytest.miaowcham.com/' },
+              ],
+            },
+          ],
+        },
+        {
+          text: '生命时钟',
+          collapsed: true,
+          items: [
+            { text: '项目说明文档', link: '/Project/Life_Clock' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/Life_Clock' },
+                { text: '网站地址', link: 'https://lifeclock.miaowcham.com' },
+              ],
+            },
+          ],
+        },
       ],
 
       // 个人文档

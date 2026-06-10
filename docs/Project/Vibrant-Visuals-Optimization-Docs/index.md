@@ -19,7 +19,11 @@
 
 - 不保证一定可用/生效，资源包修改能力有限  
 - Vibrant Visuals 还处于开发阶段，一切请以 Mojang 官方为准  
-- 建议开启 `为创建者提供的渲染龙功能` 以启用全部特性！
+- <div id="back-1">建议开启 <code>为创建者提供的渲染龙功能</code> 以启用全部特性！<sup><a href="#footnote-1">1</a></sup></div>
 
 ## 许可证
 本项目使用 CC0-1.0 许可证
+
+---
+
+<div id="footnote-1"><p style="font-size: 12px;">1. <code>为创建者提供的渲染龙功能</code> 需要 Preview 或 Beta 版本才能在世界的实验性选项中启用 <sup><a href="#back-1">↩︎</a></sup></p></div>

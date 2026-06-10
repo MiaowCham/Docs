@@ -72,9 +72,7 @@ python build_exe.py
 > 前往 [Release](https://github.com/MiaowCham/hitokoto-cli/releases) 可以下载构建好的 Windows x64 可执行文件。  
 > 或者前往 [Github Actions](https://github.com/MiaowCham/hitokoto-cli/actions/workflows/build.yml) 获取最新的多平台构建。
 > 构建版本请将 `hitokoto_cli.py` 替换为 `.\hitokoto.exe`。  
-> 将构建版本所处目录添加至环境变量中，即可在任意目录使用 `hitokoto` 命令。[^1]
-
-[^1]: 当然如果你就是想直接使用 Python 源码的话，我记得各个系统都有自定义命令的方法（具体办法自己百度！），把 `python 完整路径/hitokoyo_cli.py` 设置一个你喜欢的命令名称，也是可以实现在任意目录使用 `hitokoto` 。
+> 将构建版本所处目录添加至环境变量中，即可在任意目录使用 `hitokoto` 命令。<sup id="back-1"><a href="#footnote-1">1</a></sup>
 
 ### 基本用法
 
@@ -193,3 +191,7 @@ hitokoto 开发者中心版权声明：
 ### 特别感谢: [一言官方](https://hitokoto.cn/)
   - 提供了 [API 服务](https://developer.hitokoto.cn/sentence/)
   - 提供了[语句包下载服务](https://sentences-bundle.hitokoto.cn/)
+
+---
+
+<div id="footnote-1"><p style="font-size: 12px;">1. 当然如果你就是想直接使用 Python 源码的话，我记得各个系统都有自定义命令的方法（具体办法自己百度！），把 <code>python 完整路径/hitokoyo_cli.py</code> 设置一个你喜欢的命令名称，也是可以实现在任意目录使用 <code>hitokoto</code> 。 <sup><a href="#back-1">↩︎</a></sup></p></div>

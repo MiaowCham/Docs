@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, provide } from 'vue'
+import { nextTick, provide, onMounted } from 'vue'
 
 // Components
 import BackToTop from './components/BackToTop.vue'
+import ImagePreview from './components/ImagePreview.vue'
+import ReloadPrompt from './components/ReloadPrompt.vue'
 
 // 切换 夜间 / 日间 模式
 const { isDark } = useData()
@@ -54,6 +56,8 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       <BackToTop />
     </template>
   </DefaultTheme.Layout>
+  <ImagePreview />
+  <ReloadPrompt />
 </template>
 
 <style lang="scss">

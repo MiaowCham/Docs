@@ -3,7 +3,7 @@
 >最新的预览版本(1.21.90+)中，Mojang 修复了很多阴间调色，故不再推荐使用主资源包
 ## 主资源包 Main Pack
 链接：[主资源包 Main Pack](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/tree/main//Main%20Pack/)
-- 添加多种点光源
+- 添加多种点光源<sup id="back-1"><a href="#footnote-1">1</a></sup>
 - 轻微提高自然光亮度以提升水底/地底的亮度
 - 将原版16x阴影分辨率提升至32x
 - 降低 chlorophyll 值，避免原版“核废水”级水下效果
@@ -18,3 +18,7 @@
 [🔗](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/tree/main//Water%20Caustics%20disabled%20Pack/)|水底焦散关闭包<br>Water Caustics disabled Pack|关闭了水底焦散效果|
 [🔗](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/tree/main//Water%20Textures%20Addon/)|水面纹理拓展包<br>Water Textures Addon|添加了Vibrant Visuals原版水面纹理和法线PBR<br>用于补充没有水面材质的资源包<br>**该资源包需要置顶**|
 [🔗](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/tree/main//Water%20Waves%20Addon/)|水面波浪拓展包<br>Water Waves Addon|启用了被关闭的水面波浪<br>启用后水面纹理会变淡<br>**无法与水底焦散关闭包同时使用**|
+
+---
+
+<div id="footnote-1"><p style="font-size: 12px;">1. 需要在 Preview 或 Beta 版本中为世界启用 <code>为创建者提供的渲染龙功能</code> 才可使用点光源相关特性 <sup><a href="#back-1">↩︎</a></sup></p></div>

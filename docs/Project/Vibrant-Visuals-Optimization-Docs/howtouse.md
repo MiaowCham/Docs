@@ -4,7 +4,7 @@
 将下载得到的 `mcpack-files.zip` 解压，将解压得到的 `.mcpack` 文件使用 Minecraft 打开即可导入
 
 
-### 1.21.80 正式版已支持灵动视效，需在实验性玩法开启
+### <div id="back-1">1.21.80 以上的正式版已支持灵动视效，预览版玩家建议开启 <code>为创建者提供的渲染龙功能</code> 以启用全部特性！<sup><a href="#footnote-1">1</a></sup></div>
 
 ---
 
@@ -38,3 +38,7 @@
 
 ### iOS/iPadOS设备
 - 煮啵太穷了买不起 Apple，自己去搜教程吧（悲
+
+---
+
+<div id="footnote-1"><p style="font-size: 12px;">1. <code>为创建者提供的渲染龙功能</code> 需要 Preview 或 Beta 版本才能在世界的实验性选项中启用 <sup><a href="#back-1">↩︎</a></sup></p></div>

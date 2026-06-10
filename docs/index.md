@@ -38,10 +38,10 @@ hero:
 - 📺 可能会在 [Bilibili](https://space.bilibili.com/485769432) 上传一些视频。
 
 ### 📫 联系方式：
-- 💗 爱发电：<a href="https://afdian.com/a/MiaowCham" target="_blank">https://afdian.com/a/MiaowCham</a>
+- 💗 爱发电：[喵锵](https://afdian.com/a/MiaowCham)（快来V我50😋）
 - 📧 邮箱: <a href="mailto:mcyyds1234@outlook.com" target="_blank">mcyyds1234@outlook.com</a>
 - 📧 QQ邮箱: <a href="mailto:qq@miaowcham.com" target="_blank">qq@miaowcham.com</a>
-- 🐧 QQ: [2049669820](https://qm.qq.com/q/qjU8Nm72fe)
+- 🐧 QQ: [2049669820](https://qm.qq.com/q/qjU8Nm72fe)（欢迎扩列）
 - ✈️ Telegram: [@MiaowCham](https://t.me/miaowcham)
 
 <script>

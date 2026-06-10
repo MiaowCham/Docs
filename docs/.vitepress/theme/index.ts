@@ -2,18 +2,16 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-// Nprogress
-import vitepressNprogress from 'vitepress-plugin-nprogress'
-import 'vitepress-plugin-nprogress/lib/css/index.css'
 import Layout from './Layout.vue'
 import ImagePreview from './components/ImagePreview.vue'
 import ReloadPrompt from './components/ReloadPrompt.vue'
+import vitepressNprogress from 'vitepress-plugin-nprogress'
+import 'vitepress-plugin-nprogress/lib/css/index.css'
 import './style.css'
 import './blockquote.css'
 import './custom-block.css'
 import './custom.css'
 import './secret.css'
-import './responsive.css'
 
 export default {
   extends: DefaultTheme,
@@ -24,13 +22,13 @@ export default {
     })
   },
   enhanceApp(ctx) {
-    vitepressNprogress(ctx)
     ctx.app.component('ImagePreview', ImagePreview)
     ctx.app.component('ReloadPrompt', ReloadPrompt)
+    vitepressNprogress(ctx)
     
     // 禁用右键菜单和快捷键，并显示提示
     if (typeof window !== 'undefined') {
-            // 监听主题变化，在切换时关闭提示弹窗
+      // 监听主题变化，在切换时关闭提示弹窗
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
@@ -136,28 +134,21 @@ export default {
         }, 3000)
       }
       
-      // 禁用文本选择，防止鼠标在文本上变为编辑光标
-      document.documentElement.style.userSelect = 'none'
-      document.documentElement.style.webkitUserSelect = 'none'
-      
-      // 禁用右键菜单 (已注释)
-      /*
-      document.addEventListener('contextmenu', (e) => {
+      // 禁用右键菜单
+      /*document.addEventListener('contextmenu', (e) => {
         e.preventDefault()
-        createToast('为了浏览体验，本站禁用右键')
+        createToast('为了浏览体验和版权保护，本站禁止右键菜单')
         return false
-      })
-      */
+      })*/
       
       // 禁用F12、Ctrl+Shift+I等开发者工具快捷键
-      /*
-      document.addEventListener('keydown', (e) => {
+      /*document.addEventListener('keydown', (e) => {
         if (e.key === 'F12' || 
             (e.ctrlKey && e.shiftKey && e.key === 'I') ||
             (e.ctrlKey && e.shiftKey && e.key === 'C') ||
             (e.ctrlKey && e.key === 'u')) {
           e.preventDefault()
-          createToast('为了浏览体验，本站禁用开发者工具')
+          createToast('为了浏览体验和版权保护，本站禁止开发者工具')
           return false
         }
       })*/

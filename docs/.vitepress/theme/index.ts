@@ -136,12 +136,18 @@ export default {
         }, 3000)
       }
       
-      // 禁用右键菜单
+      // 禁用文本选择，防止鼠标在文本上变为编辑光标
+      document.documentElement.style.userSelect = 'none'
+      document.documentElement.style.webkitUserSelect = 'none'
+      
+      // 禁用右键菜单 (已注释)
+      /*
       document.addEventListener('contextmenu', (e) => {
         e.preventDefault()
         createToast('为了浏览体验，本站禁用右键')
         return false
       })
+      */
       
       // 禁用F12、Ctrl+Shift+I等开发者工具快捷键
       /*

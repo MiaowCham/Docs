@@ -4,6 +4,9 @@
 
 本文档将会告诉你如何将 AMLL TTML Tool（下称 ATT） 制作的 TTML 转换成 Apple Syllable
 
+> [!note]
+> 现在你也可以使用 [这个工具](/Project/ttml_converter) 来快速进行格式化转换。
+
 ## 准备
 
 ### 在进行转换前，请先准备以下内容：

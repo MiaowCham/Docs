@@ -87,3 +87,11 @@
 - [项目地址](https://github.com/MiaowCham/Life_Clock)
 - [网站地址](https://lifeclock.miaowcham.com)
 - 项目许可证: [MIT](https://github.com/MiaowCham/Life_Clock/blob/main/LICENSE)
+
+## TTML 转换器 (TTML Converter)
+
+适用于 AMLL TTML Tools 制作的 TTML 歌词的快速格式化转换的 Python 命令行工具，以适配 Apple 官方标准。
+
+- [项目说明文档](/Project/ttml_converter)
+- [项目地址](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/project/ttml_converter.py)
+- 项目许可证: [CC0 1.0](https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/LICENSE.CC0-1.0)

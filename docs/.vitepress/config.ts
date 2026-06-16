@@ -160,6 +160,19 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: 'TTML 转换器',
+          collapsed: true,
+          items: [
+            { text: '项目说明文档', link: '/Project/ttml_converter' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/Repository_for_MiaowCham/blob/main/project/ttml_converter.py' },
+              ],
+            },
+          ],
+        }
       ],
 
       // 个人文档

@@ -46,10 +46,10 @@ export default defineConfig({
           ],
         },
         {
-          text: 'GenshinCraft 整合材质',
+          text: 'GangesCraft Pro 整合材质',
           collapsed: true,
           items: [
-            { text: '项目介绍文档', link: '/Project/GenshinCraft_Texturepack' },
+            { text: '项目介绍文档', link: '/Project/GangesCraft_Pro_Texturepack' },
             {
               text: '外部链接',
               items: [

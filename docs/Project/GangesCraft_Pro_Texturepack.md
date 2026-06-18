@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="/pictures/GenshinCraft.png" width="28%" alt="icon" data-clickable /><br>
-  <h1>GenshinCraft 整合材质</h1><br>
+  <img src="/pictures/GC_Pro.png" width="28%" alt="icon" data-clickable /><br>
+  <h1>GangesCraft Pro 整合材质</h1><br>
 </div>
 
 一包通吃，无需加载过多材质包即可进行游玩。  

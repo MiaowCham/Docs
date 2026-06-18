@@ -10,12 +10,12 @@
 - [发行版下载](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/releases/latest)
 - 项目许可证: [CC0-1.0](https://github.com/MiaowCham/Vibrant-Visuals-Optimization/blob/main/LICENSE)
 
-## GenshinCraft 整合材质
+## GangesCraft Pro 整合材质
 
 一包通吃，无需加载过多材质包即可进行游玩。  
 无论你是生存玩家、PVP 玩家、红石玩家，还是刚入门的新手，都可以使用这个材质包。
 
-- [项目介绍文档](/Project/GenshinCraft_Texturepack)
+- [项目介绍文档](/Project/GangesCraft_Pro_Texturepack)
 - [下载地址 (提取码: 9FZm)](https://1815255458.share.123pan.cn/123pan/tiDtVv-qkXnh?pwd=9FZm)
 
 ## 一言(Hitokoto)命令行工具

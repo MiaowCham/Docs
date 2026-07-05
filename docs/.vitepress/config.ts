@@ -180,9 +180,16 @@ export default defineConfig({
         { text: '个人文档',
           items: [
             { text: '我创作的文档', link: '/docs/' },
-            { text: 'Lyrics Next 格式规范', link: '/docs/lyric/Lyrics_Next' },
             { text: 'Lyricify Syllable Next 格式规范', link: '/docs/lyric/Lyricify_Syllable_Next' },
             { text: '许可证', link: '/docs/Lincese-Docs'}
+          ]
+        },
+        {
+          text: 'Lyrics Next 格式规范',
+          collapsed: true,
+          items: [
+            { text: '第一版', link: '/docs/Lyrics_Next/v1' },
+            { text: '第二版', link: '/docs/Lyrics_Next/v2' }
           ]
         },
         {

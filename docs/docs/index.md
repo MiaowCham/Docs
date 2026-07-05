@@ -12,6 +12,7 @@
 一种基于 [LRC](https://zh.wikipedia.org/wiki/LRC%E6%A0%BC%E5%BC%8F) 的逐字歌词格式
 
 - 文档链接：[Lyrics Next 格式规范第一版](./lyric/Lyrics_Next)
+- 文档链接：[Lyrics Next 格式规范第二版](./lyric/Lyrics_Next_v2)
 
 ## Lyricify Syllable Next 格式规范
 

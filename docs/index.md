@@ -63,8 +63,7 @@ document.getElementById('copyBtn').addEventListener('click', async () => {
     ta.remove();
   }
 });
-</script>
-<script>
+
   fetch('https://v1.hitokoto.cn')
     .then(response => response.json())
     .then(data => {

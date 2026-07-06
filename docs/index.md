@@ -37,12 +37,17 @@ hero:
 - 🐍 正在通过 AI 自学 Python 并尝试完成一些项目。
 - 📺 可能会在 [Bilibili](https://space.bilibili.com/485769432) 上传一些视频。
 
-### 📫 联系方式：
-- 💗 爱发电：[喵锵](https://afdian.com/a/MiaowCham)（快来V我50😋）
+### 📫 联系方式
 - 📧 邮箱: <a href="mailto:mcyyds1234@outlook.com" target="_blank">mcyyds1234@outlook.com</a>
 - 📧 QQ邮箱: <a href="mailto:qq@miaowcham.com" target="_blank">qq@miaowcham.com</a>
 - 🐧 QQ: [2049669820](https://qm.qq.com/q/qjU8Nm72fe)（欢迎扩列）
 - ✈️ Telegram: [@MiaowCham](https://t.me/miaowcham)
+
+### 🍗 请我吃KFC
+- 💴 数字人民币钱包ID：`0071130812093028`
+- 💵 USDT APTOS钱包地址：`0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984`
+- 🟦 PayPal转账邮箱：`2049669820@qq.com`
+- 💗 爱发电：[喵锵](https://afdian.com/a/MiaowCham)
 
 <script>
   fetch('https://v1.hitokoto.cn')

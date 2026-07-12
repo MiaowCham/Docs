@@ -134,6 +134,6 @@ onBeforeUnmount(() => {
 
 ### 🍗 请我吃KFC
 - 💴 数字人民币钱包ID：`0071130812093028`
-- 💵 USDT APTOS钱包地址：`0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984` <button type="button" class="copy-address-button" aria-label="复制 USDT APTOS 钱包地址" @click="copyUsdtAddress">{{ copyButtonText }}</button>
+- 💵 USDT APTOS钱包地址：<button type="button" class="copy-address-button" aria-label="复制 USDT APTOS 钱包地址" @click="copyUsdtAddress">{{ copyButtonText }}</button>
 - 🟦 PayPal转账邮箱：`2049669820@qq.com`
 - 💗 爱发电：[喵锵](https://afdian.com/a/MiaowCham)

@@ -70,6 +70,17 @@
 - [发行版下载](https://github.com/MiaowCham/OptiMemory/releases/latest)
 - 项目许可证: [Apache 2.0](https://github.com/MiaowCham/OptiMemory/blob/main/LICENSE)
 
+## Codex Limit Widget
+
+一个用于查看 Codex 用量与重置时间的轻量跨平台桌面组件。
+
+- [中文说明文档](/Project/Codex_Limit_Widget_CN)
+- [EN README](/Project/Codex_Limit_Widget_EN)
+- [项目地址](https://github.com/MiaowCham/Codex_Limit_Widget)
+- [构建板下载](https://github.com/MiaowCham/Codex_Limit_Widget/actions/workflows/build.yml)
+- [发行版下载](https://github.com/MiaowCham/Codex_Limit_Widget/releases/latest)
+- 项目许可证: [Apache 2.0](https://github.com/MiaowCham/Codex_Limit_Widget/blob/main/LICENSE)
+
 ## 测测你是不是猪🐷
 
 趣味小测试🥳测测你是不是猪🐷

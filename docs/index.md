@@ -45,24 +45,24 @@ hero:
 
 ### 🍗 请我吃KFC
 - 💴 数字人民币钱包ID：`0071130812093028`
-- 💵 USDT APTOS钱包地址：<button id="copyBtn">点我复制</button>
+ - 💵 USDT APTOS钱包地址：`0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984`<!--<button id="copyBtn">点我复制</button> -->
 - 🟦 PayPal转账邮箱：`2049669820@qq.com`
 - 💗 爱发电：[喵锵](https://afdian.com/a/MiaowCham)
 
 <script>
-document.getElementById('copyBtn').addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText('0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984');
-  } catch {
-    // 降级方案
-    const ta = document.createElement('textarea');
-    ta.value = '0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    ta.remove();
-  }
-});
+// document.getElementById('copyBtn').addEventListener('click', async () => {
+//   try {
+//     await navigator.clipboard.writeText('0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984');
+//   } catch {
+//     // 降级方案
+//     const ta = document.createElement('textarea');
+//     ta.value = '0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984';
+//     document.body.appendChild(ta);
+//     ta.select();
+//     document.execCommand('copy');
+//     ta.remove();
+//   }
+// });
 
   fetch('https://v1.hitokoto.cn')
     .then(response => response.json())

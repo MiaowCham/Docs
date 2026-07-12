@@ -133,6 +133,22 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Codex Limit Widget',
+          collapsed: true,
+          items: [
+            { text: '中文说明文档', link: '/Project/Codex_Limit_Widget_CN' },
+            { text: 'EN README', link: '/Project/Codex_Limit_Widget_EN' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/Codex_Limit_Widget' },
+                { text: '发行版下载', link: 'https://github.com/MiaowCham/Codex_Limit_Widget/releases/latest' },
+                { text: '构建板下载', link: 'https://github.com/MiaowCham/Codex_Limit_Widget/actions/workflows/build.yml' },
+              ],
+            },
+          ],
+        },
+        {
           text: '测测你是不是猪',
           collapsed: true,
           items: [

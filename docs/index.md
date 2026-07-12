@@ -25,6 +25,95 @@ hero:
 
 ---
 
+<script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+
+const usdtAddress = '0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984'
+const copyButtonText = ref('复制')
+let copyStatusTimer
+let hitokotoController
+
+async function copyUsdtAddress() {
+  try {
+    let copied = false
+
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(usdtAddress)
+        copied = true
+      } catch (error) {
+        console.warn('Clipboard API 不可用，尝试兼容复制方案：', error)
+      }
+    }
+
+    if (!copied) {
+      const textarea = document.createElement('textarea')
+      textarea.value = usdtAddress
+      textarea.readOnly = true
+      textarea.style.position = 'fixed'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+
+      try {
+        textarea.select()
+        copied = document.execCommand('copy')
+      } finally {
+        textarea.remove()
+      }
+    }
+
+    if (!copied) throw new Error('Copy command failed')
+    copyButtonText.value = '已复制'
+  } catch (error) {
+    console.error('复制 USDT 地址失败：', error)
+    copyButtonText.value = '复制失败'
+  }
+
+  clearTimeout(copyStatusTimer)
+  copyStatusTimer = setTimeout(() => {
+    copyButtonText.value = '复制'
+  }, 2000)
+}
+
+onMounted(async () => {
+  hitokotoController = new AbortController()
+
+  try {
+    const response = await fetch('https://v1.hitokoto.cn', {
+      signal: hitokotoController.signal
+    })
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+
+    const data = await response.json()
+    const hitokoto = document.querySelector('#hitokoto_text')
+    if (!hitokoto) return
+
+    hitokoto.href = `https://hitokoto.cn/?uuid=${encodeURIComponent(data.uuid)}`
+    hitokoto.textContent = data.hitokoto
+
+    const author = data.from_who || ''
+    const source = data.from || ''
+    const attribution = author && source
+      ? `${author}「${source}」`
+      : (author || (source ? `「${source}」` : ''))
+
+    if (attribution) {
+      const attributionLine = document.createElement('div')
+      attributionLine.style.cssText = 'text-align: right; margin-top: 8px;'
+      attributionLine.textContent = `—— ${attribution}`
+      hitokoto.append(document.createElement('br'), attributionLine)
+    }
+  } catch (error) {
+    if (error.name !== 'AbortError') console.error('获取一言失败：', error)
+  }
+})
+
+onBeforeUnmount(() => {
+  clearTimeout(copyStatusTimer)
+  hitokotoController?.abort()
+})
+</script>
+
 ## 你好 👋 我是喵锵 (MiaowCham)
 
 我的名字是喵锵（MiaowCham），其实这个名字是我查字典时偶然得到的 💦  
@@ -45,47 +134,6 @@ hero:
 
 ### 🍗 请我吃KFC
 - 💴 数字人民币钱包ID：`0071130812093028`
- - 💵 USDT APTOS钱包地址：`0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984`<!--<button id="copyBtn">点我复制</button> -->
+- 💵 USDT APTOS钱包地址：`0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984` <button type="button" class="copy-address-button" aria-label="复制 USDT APTOS 钱包地址" @click="copyUsdtAddress">{{ copyButtonText }}</button>
 - 🟦 PayPal转账邮箱：`2049669820@qq.com`
 - 💗 爱发电：[喵锵](https://afdian.com/a/MiaowCham)
-
-<script>
-// document.getElementById('copyBtn').addEventListener('click', async () => {
-//   try {
-//     await navigator.clipboard.writeText('0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984');
-//   } catch {
-//     // 降级方案
-//     const ta = document.createElement('textarea');
-//     ta.value = '0x607fa5fe5a2dfb0025662f5527c9f61bd53b75677cbeb6256866db55e8f0c984';
-//     document.body.appendChild(ta);
-//     ta.select();
-//     document.execCommand('copy');
-//     ta.remove();
-//   }
-// });
-
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      const hitokoto = document.querySelector('#hitokoto_text')
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
-      
-      // 创建两行显示格式：正文 + 换行 + 作者出处（靠右）
-      let content = data.hitokoto
-      if (data.from_who || data.from) {
-        const author = data.from_who || ''
-        const source = data.from || ''
-        const attribution = author && source ? `${author}「${source}」` : (author || (source ? `「${source}」` : ''))
-        content += `\n—— ${attribution}`
-      }
-      
-      // 使用HTML格式来实现第二行靠右
-      const lines = content.split('\n')
-      if (lines.length > 1) {
-        hitokoto.innerHTML = `${lines[0]}<br><div style="text-align: right; margin-top: 8px;">${lines[1]}</div>`
-      } else {
-        hitokoto.innerText = content
-      }
-    })
-    .catch(console.error)
-</script>

@@ -1,5 +1,5 @@
 <div align="center">
-<img src="Codex_Limit_Widget.png" width="20%" alt="Codex Limit Widget 图标" style="margin-bottom: -20px;"/>
+<img src="/pictures/Codex_Limit_Widget.png" width="20%" alt="Codex Limit Widget 图标" style="margin-bottom: -20px;"/>
 
 # Codex Limit Widget
 

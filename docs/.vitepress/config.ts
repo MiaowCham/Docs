@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 
-const appearanceBootstrap = `<script id="appearance-bootstrap">(()=>{try{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",t=e==="dark"||(e==="auto"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",t)}catch(e){document.documentElement.classList.toggle("dark",matchMedia("(prefers-color-scheme: dark)").matches)}})();</script><style>html{background:#fff;color-scheme:light}html.dark{background:#1b1b1f;color-scheme:dark}</style>`;
+const appearanceBootstrap = `<script data-cfasync="false" id="appearance-bootstrap">(()=>{try{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",t=e==="dark"||(e==="auto"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",t)}catch(e){document.documentElement.classList.toggle("dark",matchMedia("(prefers-color-scheme: dark)").matches)}})();</script><style>html{background:#fff;color-scheme:light}html.dark{background:#1b1b1f;color-scheme:dark}</style>`;
 
 export default defineConfig({
   title: '喵锵的文档中心',
@@ -11,7 +11,7 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/pictures/logo.png' }]
   ],
 
-  // 在样式和应用脚本可能绘制页面前应用已保存的主题。
+  // 在首次绘制前应用主题；data-cfasync 可避免 Cloudflare Rocket Loader 延迟执行。
   transformHtml(code) {
     return code.replace('<head>', `<head>${appearanceBootstrap}`);
   },

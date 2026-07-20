@@ -149,6 +149,19 @@ export default defineConfig({
           ],
         },
         {
+          text: 'NCM CLI 点歌台',
+          collapsed: true,
+          items: [
+            { text: '项目说明文档', link: '/Project/ncm-cli' },
+            {
+              text: '外部链接',
+              items: [
+                { text: '项目地址', link: 'https://github.com/MiaowCham/ncm-cli' },
+              ],
+            },
+          ],
+        },
+        {
           text: '测测你是不是猪',
           collapsed: true,
           items: [

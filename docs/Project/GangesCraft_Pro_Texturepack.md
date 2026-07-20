@@ -10,21 +10,17 @@
 
 ## Features
 
-<input type="checkbox" id="remember" name="remember" disabled checked> 红石显示（来自 Xe_Kr）  
-<input type="checkbox" id="remember" name="remember" disabled checked> 防目瞎高光、蠹虫指示（来自 Xe_Kr）  
+<input type="checkbox" id="remember" name="remember" disabled checked> 红石显示  
+<input type="checkbox" id="remember" name="remember" disabled checked> 防目瞎高光、蠹虫指示  
 <input type="checkbox" id="remember" name="remember" disabled checked> 发光矿物（OptiFine/钠，来自 B 站 @快辰）  
-<input type="checkbox" id="remember" name="remember" disabled checked> PVP 向优化（来自 B 站 @白粥艾尔希）  
+<input type="checkbox" id="remember" name="remember" disabled checked> PVP 向优化  
 <input type="checkbox" id="remember" name="remember" disabled checked> 血量显示（仅限 OptiFine，未证实可用）  
 <input type="checkbox" id="remember" name="remember" disabled checked> 3D 不死图腾（贴图放置路径：`assets/minecraft/textures/item/1pf`）  
 <input type="checkbox" id="remember" name="remember" disabled checked> 农作物状态指示（原创 + 来自 B 站 @化蝶-莊周）  
-<input type="checkbox" id="remember" name="remember" disabled checked> 半砖指示（来自 B 站 @化蝶-莊周）  
-<input type="checkbox" id="remember" name="remember" disabled checked> 更好的花朵材质（来自 @南烛）  
-<input type="checkbox" id="remember" name="remember" disabled checked> 更好的 UI（来自 @南烛）  
+<input type="checkbox" id="remember" name="remember" disabled checked> 半砖指示  
+<input type="checkbox" id="remember" name="remember" disabled checked> 更好的花朵材质  
+<input type="checkbox" id="remember" name="remember" disabled checked> 更好的 UI  
 <input type="checkbox" id="remember" name="remember" disabled checked> 草方块材质优化
-
-## ToDo
-
-<input type="checkbox" id="remember" name="remember" disabled> 去除相关资源并替换为开源内容  
 
 ## 使用说明
 

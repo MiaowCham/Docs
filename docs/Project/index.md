@@ -81,6 +81,14 @@
 - [发行版下载](https://github.com/MiaowCham/Codex_Limit_Widget/releases/latest)
 - 项目许可证: [Apache 2.0](https://github.com/MiaowCham/Codex_Limit_Widget/blob/main/LICENSE)
 
+## NCM CLI 点歌台
+
+一个运行在终端中的网易云音乐播放器。支持歌曲与歌词搜索、歌单浏览、扫码或 Cookie 登录、逐行歌词、封面显示、播放列表，以及 mpv、VLC、Windows MediaPlayer 和 ffplay 播放后端。
+
+- [项目说明文档](/Project/ncm-cli)
+- [项目地址](https://github.com/MiaowCham/ncm-cli)
+- 项目许可证: [MIT](https://github.com/MiaowCham/ncm-cli/blob/main/LICENSE)
+
 ## 测测你是不是猪🐷
 
 趣味小测试🥳测测你是不是猪🐷

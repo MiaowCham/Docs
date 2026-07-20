@@ -1,15 +1,21 @@
 <div align="center">
-<img src="/pictures/Codex_Limit_Widget.png" width="20%" alt="Codex Limit Widget icon" style="margin-bottom: -20px;"/>
+<img src="/pictures/Codex_Limit_Widget.png" width="20%" alt="Codex Limit Widget icon" data-clickable/>
 
 # Codex Limit Widget
 
 English / [简体中文](Codex_Limit_Widget_CN)
 
+</div>
+
+<div style="white-space: nowrap; display: flex; flex-wrap: nowrap; gap: 5px; justify-content: center;">
   <a href="https://github.com/MiaowCham/Codex_Limit_Widget/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-orange.svg" alt="Apache 2.0" style="display: inline-block;"></a>
   <a href="https://github.com/search?q=repo%3AMiaowCham%2FCodex_Limit_Widget++language%3AC%23&type=code"><img src="https://img.shields.io/badge/Languages-C%23-blue.svg" alt="Static Badge" style="display: inline-block;"></a>
   <a href="https://github.com/MiaowCham/Codex_Limit_Widget/releases"><img src="https://img.shields.io/github/v/release/MiaowCham/Codex_Limit_Widget" alt="Github Release" style="display: inline-block;"></a>
   <a href="https://github.com/MiaowCham/Codex_Limit_Widget/actions/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/MiaowCham/Codex_Limit_Widget/.github/workflows/build.yml" alt="GitHub Actions" style="display: inline-block;"></a>
   <a href="https://github.com/MiaowCham/Codex_Limit_Widget/commits/main"><img src="https://img.shields.io/github/last-commit/MiaowCham/Codex_Limit_Widget" alt="GitHub last commit" style="display: inline-block;"></a>
+</div>
+
+<div align="center">
 
 A lightweight cross-platform desktop widget for viewing Codex usage and reset times.
 

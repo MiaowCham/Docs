@@ -1,0 +1,249 @@
+diff --git a/docs/docs/Lyrics_Next/v2.0.md b/docs/docs/Lyrics_Next/v2.1.md
+index 564ceb3..8c6af86 100644
+--- a/docs/docs/Lyrics_Next/v2.0.md
++++ b/docs/docs/Lyrics_Next/v2.1.md
+@@ -1,9 +1,9 @@
+-# Lyrics Next 格式规范第二版
++# Lyrics Next 格式规范第二版 第一次修正
+ 
+ > [!note]
+ > 仅供娱乐，当然如果你的软件想使用这个格式是完全可以的（真的会有人用吗？）
+ 
+-一种基于 [LRC](https://zh.wikipedia.org/wiki/LRC%E6%A0%BC%E5%BC%8F) 的逐音节歌词格式，参考了 [TTML](https://en.wikipedia.org/wiki/Timed_Text_Markup_Language)、[Lyricify Syllable](https://github.com/WXRIW/Lyricify-App/blob/main/docs/Lyricify%204/Lyrics.md#lyricify-syllable-%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83) 和 [Apple Syllable](https://help.apple.com/itc/videoaudioassetguide/#/itc0f14fecdd)  
++一种基于 [LRC](https://zh.wikipedia.org/wiki/LRC%E6%A0%BC%E5%BC%8F) 的按节拍划分歌词格式，参考了 [TTML](https://en.wikipedia.org/wiki/Timed_Text_Markup_Language)、[Lyricify Syllable](https://github.com/WXRIW/Lyricify-App/blob/main/docs/Lyricify%204/Lyrics.md#lyricify-syllable-%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83) 和 [Apple Syllable](https://help.apple.com/itc/videoaudioassetguide/#/itc0f14fecdd)  
+ Lyrics Next 为了解决普通 TTML 歌词可读性差、难以直接编辑的问题而诞生  
+ Lyrics Next 歌词文件可以直接使用 `lrc` 后缀，也可以使用单独的 `lrcn`
+ 
+@@ -16,6 +16,8 @@ Lyrics Next 歌词文件可以直接使用 `lrc` 后缀，也可以使用单独
+ 
+ - 对头部信息进行了精简和变更，使其更适配 Apple Music 新特性
+ - 将 `end` 标签统一为同步多媒体集成语言（SMIL）表示
++- 新增 LRCN Trans 翻译格式
++- 改进了内嵌翻译及发音的方式
+ - 大幅修改了特殊歌词的格式，使其更适配 Apple Music 新特性
+ 
+ ## 规范用语
+@@ -23,8 +25,8 @@ Lyrics Next 歌词文件可以直接使用 `lrc` 后缀，也可以使用单独
+ ### 时间标签
+ 
+ 在 Lyrics Next 中，歌词行行首被 `[]` 包裹的内容被称为 `行标签`，后续的歌词内容被称为 `正文`  
+-正文中被 `<>` 包裹的内容被称为 `逐音节标签`  
+-凡事使用时间轴标记的内容均可称为 `对象`，包括行，字，词或音节  
++正文中被 `<>` 包裹的内容被称为 `按节拍划分标签`  
++凡事使用时间轴标记的内容均可称为 `对象`，包括行，字，词或节拍  
+ 
+ ### 歌曲对唱关系
+ 
+@@ -41,8 +43,9 @@ Lyrics Next 歌词文件可以直接使用 `lrc` 后缀，也可以使用单独
+ 
+ | 标签                           | 含义                                                     |
+ | ------------------------------ | -------------------------------------------------------- |
+-| [lrcn-version:v2.0]            | Lyrics Next 格式版本                                     |
+-| [timing:syllable]              | 项目类型<br>`line` 为逐行，`word` `syllable` 为逐字/音节 |
++| [Lyrics Next]                  | Lyrics Next 格式                                         |
++| [version:2.1]                  | 格式版本                                                 |
++| [timing:syllable]              | 项目类型<br>`line` 为逐行，`word` `syllable` 为逐字/节拍   |
+ | [lang:zh-CN]                   | 主要语言                                                 |
+ | [translates.lang:en-US]        | 翻译语言                                                 |
+ | [transliterations.lang:pinyin] | 发音语言                                                 |
+@@ -63,18 +66,21 @@ Lyrics Next 歌词文件可以直接使用 `lrc` 后缀，也可以使用单独
+ Lyrics Next 歌词的标准格式为：
+ 
+ ```lrcn
+-[start,end,agent]<start,end>Word <start,end>word
++[start,end,agent,line]<start,end>Word <start,end>word
+ ```
+ 
+ - `start` 为起始时间，其时间戳使用同步多媒体集成语言（SMIL）表示。  
+-    一般情况下使用SMIL表示，可提供完整或部分时钟值：  
++    一般情况下使用 SMIL 表示，可提供完整或部分时钟值：  
+     `hh:mm:ss.sss（时:分:秒.毫秒）`  
+     *其中，小时和毫秒可不提供。*  
+ - `end` 为时长，其时间戳使用同步多媒体集成语言（SMIL）表示。  
+     *该对象可以省略，若不存在则将后一个项目的开始时间作为结束时间。*
+ - `agent` 用于标记该句演唱歌词的艺人的 ID。  
+-    每一位演唱者都应该被分派到一个ID。
++    每一位演唱者都应该被分派到一个ID。  
+     *该对象可以省略，若只有一个演唱者可以不填。*
++- `line` 歌词的行 ID，推荐格式为 `Lx`，如 `L1` `L2`。  
++    虽然行 ID 的格式允许自行决定，但不允许使用 `x-bg`、纯数字或类似 SMIL 的 ID  
++    *该对象可以但不建议省略，可能影响翻译和发音的解析*
+ - `<>` 中的时间戳为后方单词的起始时间和时长。
+ 
+ ### 省略机制
+@@ -82,26 +88,27 @@ Lyrics Next 歌词的标准格式为：
+ 为兼容 LRC 与 增强型LRC 格式，*Lyrics Next 第二版* 要求允许对额外扩展的对象进行省略。  
+ 因此，Lyrics Next 格式是 LRC 与 增强型LRC 格式的超集，所有标准的 LRC 与 增强型LRC 格式均为合法的 Lyrics Next 格式歌词
+ 
+-#### 行标签中，*Lyrics Next 第二版* 额外扩展了 `end` 和 `agent` 标签，允许进行以下类型的省略：
++#### 行标签中，*Lyrics Next 第二版* 额外扩展了 `end`、`agent` 和 `line` 标签，允许进行以下类型的省略：
+ 
+-- `[start,end]`（只省略 `agent` 标签，单一演唱者时可以使用）
+-- `[start,,agent]`（只省略 `end` 标签）
++- `[start,end,line]`（只省略 `agent` 标签，单一演唱者时可以使用）
++- `[start,,agent,line]`（只省略 `end` 标签）
++- 同理可以省略 `line` 标签，但不建议省略，可能影响翻译和发音的解析
+ - `[start]`（全部省略，LRC 格式）
+ 
+ 为了保持格式完整，只省略 `end` 标签时，必须保留逗号。  
+ 
+ 省略 `end` 标签时，解析应当遵循：
+ 
+-- 有逐音节的，将本行最后一个音节的结束时间作为结束时间
++- 有按节拍划分的，将本行最后一个节拍的结束时间作为结束时间
+ - 逐行的，以下一行的开始时间作为结束时间
+ 
+-#### 逐音节标签中，*Lyrics Next 第二版* 额外扩展了 `end` 标签，允许省略：
++#### 按节拍划分标签中，*Lyrics Next 第二版* 额外扩展了 `end` 标签，允许省略：
+ 
+ - `<start>`（全部省略，增强型LRC 格式）
+ 
+ ### 逐句歌词  
+ 
+-如果想使用 Lyrics Next 记录逐句而非逐音节歌词，则无需逐词标记时间信息：
++如果想使用 Lyrics Next 记录逐句而非按节拍划分歌词，则无需逐词标记时间信息：
+ 
+ ```lrcn
+ [start,end,agent]Lyrics
+@@ -109,10 +116,27 @@ Lyrics Next 歌词的标准格式为：
+ 
+ > 同样的，你可以根据 [省略机制](#省略机制) 对行标签的对象进行省略，但这样的话和普通 LRC 区别在哪？
+ 
+-## 附属歌词
++### 歌曲结构段落
++
++可以在行之间添加 song-part 标签，用于标记这部分歌词在歌曲结构中的作用。格式如下：
++
++```lrcn
++[song-part]            # 简写格式
++[start,end,song-part]  # 完整模式
++```
+ 
+-包括背景人声、翻译/发音信息，这些内容均视为主唱歌词的附属歌词  
+-`x-bg` 对应背景人声，`translate` 对应翻译行，`transliteration` 对应发音行
++推荐使用以下值：
++
++- Verse（主歌）
++- Chorus（副歌）
++- PreChorus（预副歌）
++- Bridge（桥段）
++- Intro（前奏）
++- Outro（尾奏）
++- Refrain（叠句）
++- Instrumental（器乐）
++
++> 歌曲组成部分的标记信息当前不向用户显示。
+ 
+ ### 背景人声
+ 
+@@ -126,45 +150,87 @@ Lyrics Next 歌词的标准格式为：
+ > [!note]
+ > 即使背景人声的起始时间在主句前面，背景人声也得在主句的后一行
+ 
++## 附属歌词
++
++包括翻译、发音信息，这些内容均视为主歌词的附属歌词  
++
++注意，在使用 LRC 或其他不带有 `line` 标签的格式时，`start` 标签必须和原文的开始时间一致。若存在多句共用完全相同的开始时间，则按照上下顺序对应。背景人声也支持对应。
++
++### 关于 LRCN Trans 格式
++
++是一种基于行 ID 进行精准对应歌词的格式，文件可以直接使用 `lrc` 后缀，也可以使用单独的 `lnt` 后缀
++
++支持以下格式：
++
++```LRCN Trans
++[start,line]翻译  # 完整格式
++[line]翻译        # 仅行数
++[x-bg]翻译        # 背景人声
++```
++
++按节拍划分的发音歌词：
++```LRCN Trans
++[start,line]<start,end>Word <start,end>word  # 完整格式
++[line]<start,end>Word <start,end>word        # 仅行数
++[x-bg]<start,end>Word <start,end>word        # 背景人声
++```
++
+ ### 翻译及行发音
+ 
+-内嵌：翻译及行发音应当位于其所属行下方，具体格式如下：
++内嵌：在包含多份歌词内嵌时，支持以下格式进行标记不同的歌词文件：
+ 
+ ```lrcn
+-[start,end,agent]<start,end>Word <start,end>word  # 主唱歌词
+-[translate]翻译
+-[transliteration]音译
+-[bg]<start,end>Word <start,end>word               # 背景
+-[translate]背景翻译
+-[transliteration]背景音译
++[type: format@xxx]
++```
++
++- `type` 为歌词类型。  
++    `lyrics` 对应主歌词，`translate` 对应翻译，`transliteration` 对应发音
++- `format@xxx` 标记歌词的格式，支持 Lyrics Next、LRC、LRC 增强版、LRCN Trans
++
++完整的歌词文件结构参考：
++
++```
++# 头部信息
++[Lyrics Next]
++[version:2.1]
++...
++
++# 主歌词
++[lyrics: format@Lyrics Next]
++[start,end,agent,line]<start,end>Word <start,end>word
++...
++
++# 翻译歌词 (完整格式)
++[translate: format@LRCN Trans]
++[start,line]翻译
++...
++
++# 发音歌词 （LRC 格式）
++[transliteration: format@LRC]
++[start]翻译
++...
++
++# 按节拍划分的发音歌词 (仅行数)
++[transliteration: format@LRCN Trans]
++[line]<start,end>Word <start,end>word
++...
+ ```
+ 
+ 外置：为了满足 i18n 需求，建议尽可能使用外置翻译/发音。  
+-外置翻译/发音文件应当是 LRC 格式文件，具体格式如下：
++外置翻译/发音文件应当是 LRC 或 LRCN Trans 格式文件，具体格式如下：
+ 
+ ```lrc
+-[type:translate]   # 声明类型
+-[lang:zh-CN]       # 声明语言
++[translate: format@LRC]   # 声明类型
++[lang:zh-CN]              # 声明语言
+ [start]内容
+ ...
+ ```
+ 
+-其中，`start` 标签必须和原文的开始时间一致。若存在多句共用完全相同的开始时间，则按照上下顺序对应。
+-
+ > [!note]
+ > 外置方案是将翻译/发音单独存放文件，通过文件名或专辑元数据文件进行关联。  
+-> 关于关联方式，不属于本格式规范范畴，可以参考 [Apple Music 技术规范](https://help.apple.com/itc/musicspec/#/itccdd938379)。  
+-
+-### 逐音节发音 *
+-
+-*Lyrics Next 第二版* 支持记录 iOS 26 起的逐音节发音。  
+-逐音节发音格式类似背景人声，但发音的音节必须和其所属的音节对应，具体格式如下：
+-
+-```lrcn
+-[transliteration]<start,end>Word <start,end>word
+-```
++> 关于关联方式，不属于本格式规范范畴，可以参考 [Apple Music 技术规范](https://help.apple.com/itc/musicspec/#/itccdd938379)。 
+ 
+-外置发音文件时，`[transliteration]` 需要变更为和所属行对应的 `[start]`。
++若配置了曲目元数据文件，声明可以省略
+ 
+ ## 许可证
+ 

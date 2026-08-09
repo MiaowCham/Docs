@@ -225,7 +225,14 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '第一版', link: '/docs/Lyrics_Next/v1' },
-            { text: '第二版', link: '/docs/Lyrics_Next/v2' }
+            {
+              text: '第二版规范',
+              collapsed: true,
+              items: [
+                { text: '初始版本（2.0）', link: '/docs/Lyrics_Next/v2.0' },
+                { text: '第一次修正（2.1）', link: '/docs/Lyrics_Next/v2.1' },
+              ],
+            },
           ]
         },
         {

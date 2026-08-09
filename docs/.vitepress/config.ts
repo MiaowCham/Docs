@@ -231,6 +231,7 @@ export default defineConfig({
               items: [
                 { text: '初始版本（2.0）', link: '/docs/Lyrics_Next/v2.0' },
                 { text: '第一次修正（2.1）', link: '/docs/Lyrics_Next/v2.1' },
+                { text: '第二次修正（2.2）', link: '/docs/Lyrics_Next/v2.2' },
               ],
             },
           ]
